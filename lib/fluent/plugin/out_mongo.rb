@@ -87,7 +87,7 @@ module Fluent
     end
 
     def format(tag, time, record)
-      [time, record].to_msgpack
+      [time, record].to_json + "\n"
     end
 
     def emit(tag, es, chain)
